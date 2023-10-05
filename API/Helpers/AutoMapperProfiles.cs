@@ -15,6 +15,8 @@ namespace API.Helpers
                 .ForMember(dest => dest.Age,
                             opt => opt.MapFrom(src => src.DateOfBirth.CalcuateAge()));
             CreateMap<Photo, PhotoDto>();
+            // COMO LOS NOMBRES DE LAS PROPIEDADES SON IGUALES, NO HAY QUE AÑADIR CONFIG. ADICIONAL *HERE
+            CreateMap<MemberUpdateDto, AppUser>(); 
         }
     }
 }
